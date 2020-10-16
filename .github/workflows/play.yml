@@ -1,0 +1,10 @@
+name: play
+
+on: push
+
+jobs:
+  uname:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: uname -a
