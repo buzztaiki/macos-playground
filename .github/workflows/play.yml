@@ -6,5 +6,10 @@ jobs:
   uname:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
       - run: uname -a
+
+  date:
+    runs-on: macos-latest
+    steps:
+      - run: date --help
+      - run: TZ=UTC date --date='2020-02-03T04:05:06+0900' +'%FT%T%z'
