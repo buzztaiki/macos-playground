@@ -12,5 +12,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: man date | col -b
-      - run: man gdate | col -b
+      - run: which gdate || true
+      - run: perl --version || true
 
