@@ -11,5 +11,5 @@ jobs:
   date:
     runs-on: macos-latest
     steps:
-      - run: man date | cat
+      - run: man date | col -b
       - run: TZ=UTC date --date='2020-02-03T04:05:06+0900' +'%FT%T%z'
