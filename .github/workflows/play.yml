@@ -11,7 +11,6 @@ jobs:
   date:
     runs-on: macos-latest
     steps:
-      - run: man date | col -b
-      - run: which gdate || true
-      - run: perl --version || true
+      - uses: actions/checkout@v2
+      - run: ./date.sh
 
